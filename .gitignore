@@ -167,3 +167,4 @@ local_examples/
 local_data/
 *.h5ad
 *.csv
+*.DS_Store
