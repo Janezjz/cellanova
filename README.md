@@ -59,10 +59,10 @@ control_dict = {
 ## model fitting
 adata_prep= calc_ME(adata_prep, integrate_key='dataidx')
 adata_prep = calc_BE(adata_prep, integrate_key, control_dict)
-adata_prep = calc_TE(adata_prep, integrate_key, control_dict)
+adata_prep = calc_TE(adata_prep, integrate_key)
 
 ## create an independent anndata object for cellanova-integrated data
-integrated = ad.AnnData(adata_prep.layers['integrated'], dtype=np.float32)
+integrated = ad.AnnData(adata_prep.layers['denoised'], dtype=np.float32)
 integrated.obs = adata_prep.obs.copy()
 integrated.var_names = adata_prep.var_names
 ```
