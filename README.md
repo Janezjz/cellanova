@@ -5,7 +5,7 @@
 - [Tutorials](#tutorials)
 - [License](#license)
 
-
+<img src="https://github.com/Janezjz/cellanova/blob/main/figures/model.jpg" width="100" height="60">
 
 ## Introduction
 
@@ -16,13 +16,12 @@ CellANOVA can be applied to multiple settings:
 * Longitudinal design
 * Irregular block design
 
-For more model details, validation results and real dataset analysis, please check out our paper (to add link). If you use our method, please use the following citation:
+For more model details, validation results and real dataset analysis, please check out our paper (to be added). If you use our method, please use the following citation (to be added):
 
 
 
 
 ## Installation
-### Dependencies
 
 Our Python package has been tested on python=3.7, 3.8, 3.9. It depends on numpy>=1.20.3, scipy>=1.7.1, pandas>=1.3.2, scikit-learn>=1.0.2, anndata>=0.7.6, scanpy>=1.8.1, harmonypy>=0.0.6. 
 
@@ -32,7 +31,6 @@ If you use conda environment, you can use the following command for an easy setu
 conda env create -f environment.yml
 ```
 
-### Download
 
 
 
@@ -70,14 +68,14 @@ integrated.var_names = adata_prep.var_names
 
 ### Example Notebooks
 
-For more detailed examples, please refer to the following jupyter notebooks:
- * CellANOVA integration workfolow (link)
- * Evaluation of batch removal performance (link)
- * Evaluation of distortion (link)
- * Evaluation of signal preservation (link)
+For more detailed illustrations, please refer to the following jupyter notebooks:
+ * [CellANOVA integration workfolow]("https://github.com/Janezjz/cellanova/blob/main/tutorials/cellanova_integration.html")
+ * [Evaluation of batch removal performance]("https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_batch_removal.html")
+ * [Evaluation of distortion]("https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_distortion.html")
+ * [Evaluation of signal preservation]("https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_signal_preservation.html")
 
 
 
 ## License
 
-
+This project is licensed under the terms of GNU GENERAL PUBLIC LICENSE Version 3.
