@@ -69,10 +69,10 @@ integrated.var_names = adata_prep.var_names
 ### Example Notebooks
 
 For more detailed illustrations, please refer to the following jupyter notebooks:
- * [CellANOVA integration workfolow](src="https://github.com/Janezjz/cellanova/blob/main/tutorials/cellanova_integration.ipynb")
- * [Evaluation of batch removal performance](src="https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_batch_removal.ipynb")
- * [Evaluation of distortion](src="https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_distortion.ipynb")
- * [Evaluation of signal preservation](src="https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_signal_preservation.ipynb")
+ * [CellANOVA integration workfolow](https://github.com/Janezjz/cellanova/blob/main/tutorials/cellanova_integration.ipynb)
+ * [Evaluation of batch removal performance](https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_batch_removal.ipynb)
+ * [Evaluation of distortion](https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_distortion.ipynb)
+ * [Evaluation of signal preservation](https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_signal_preservation.ipynb)
 
 
 
