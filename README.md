@@ -5,7 +5,7 @@
 - [Tutorials](#tutorials)
 - [License](#license)
 
-<img src="https://github.com/Janezjz/cellanova/blob/main/figures/model.jpg" width="800" height="600">
+<img src="https://github.com/Janezjz/cellanova/blob/main/figures/model.jpg" width="700" height="350">
 
 ## Introduction
 
@@ -69,10 +69,10 @@ integrated.var_names = adata_prep.var_names
 ### Example Notebooks
 
 For more detailed illustrations, please refer to the following jupyter notebooks:
- * [CellANOVA integration workfolow]("https://github.com/Janezjz/cellanova/tree/main/tutorials/cellanova_integration.html")
- * [Evaluation of batch removal performance]("https://github.com/Janezjz/cellanova/tree/main/tutorials/eval_batch_removal.html")
- * [Evaluation of distortion]("https://github.com/Janezjz/cellanova/tree/main/tutorials/eval_distortion.html")
- * [Evaluation of signal preservation]("https://github.com/Janezjz/cellanova/tree/main/tutorials/eval_signal_preservation.html")
+ * [CellANOVA integration workfolow]("https://github.com/Janezjz/cellanova/blob/main/tutorials/cellanova_integration.html")
+ * [Evaluation of batch removal performance]("https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_batch_removal.html")
+ * [Evaluation of distortion]("https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_distortion.html")
+ * [Evaluation of signal preservation]("https://github.com/Janezjz/cellanova/blob/main/tutorials/eval_signal_preservation.html")
 
 
 
