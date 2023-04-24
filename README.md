@@ -5,7 +5,7 @@
 - [Tutorials](#tutorials)
 - [License](#license)
 
-<img src="https://github.com/Janezjz/cellanova/blob/main/figures/model.jpg" width="100" height="60">
+<img src="https://github.com/Janezjz/cellanova/blob/main/figures/model.png" width="100" height="60">
 
 ## Introduction
 
