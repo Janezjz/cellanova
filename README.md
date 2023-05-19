@@ -1,25 +1,25 @@
 # CellANOVA: Cell State Space Analysis of Variance
 
-- [Introduction](#introduction)
+- [Overview](#overview)
 - [Installation](#installation)
 - [Tutorials](#tutorials)
 - [License](#license)
 
 <img src="https://github.com/Janezjz/cellanova/blob/main/figures/model.jpg" width="700" height="450">
 
-## Introduction
+## Overview
+The integration of cells across samples to remove unwanted batch variation plays a critical role in single cell analyses. When the samples are expected to be biologically distinct, it is often unclear how aggressively the cells should be aligned across samples to achieve uniformity.  CellANOVA is a Python package for batch integration with signal recovery in single cell data.  It builds on existing single cell data integration methods, and uses a pool of control samples to quantify the batch effect and separate meaningful biological variation from unwanted batch variation.  When used with an existing integration method, CellAnova allows the recovery of biological signals that are lost during integration.  
 
-CellANOVA is a Python package, for batch correction with signal recovery. It contructs a pool of control samples to estimate a latent linear space that captures cell- and gene-specific unwanted variations, which can then be used to remove batch effects from cells across all samples.  By using only samples in the control pool in the estimation of the batch variation space, CellANOVA preserves any biological differences in the non-control samples that lie outside this space.  Importantly, CellANOVA produces a batch corrected gene expression matrix which can be used for gene- and pathway-level downstream analyses, and is fast and scalable to data sets containing millions of cells. 
+There are two ways to use CellANOVA.  You can start from scratch, or you can start with an existing integration.  If you start from scratch, CellANOVA will compute an initial integration with [Harmony](https://portals.broadinstitute.org/harmony/).  However, we have also achieved good results when starting with integration computed using [Seurat](https://satijalab.org/seurat/articles/integration_rpca.html).  The method is agnostic to the initial integration algorithm, and if you prefer to start by performing your own integration, you can choose any algorithm  hat gives a reasonable initial alignment of your data.
 
-CellANOVA can be applied to multiple settings:
-* Case-control design
-* Longitudinal design
-* Irregular block design
+You will also need to select a pool of control samples.   These ``control'' samples will be used to estimate a latent linear space that captures cell- and gene-specific unwanted variations.  The basis vectors of this linear space will then be used to quantify the batch effect in each cell across all samples, and this will allow you to recover any cell- and gene-specific biological signal that is separable from batch effect that may have been erased during the initial integration.  By using only samples in the control pool in the estimation of the batch variation space, CellANOVA preserves any biological differences in the non-control samples that lie outside this space.  Importantly, CellANOVA produces a batch corrected gene expression matrix which can be used for gene- and pathway-level downstream analyses.
+The selection of control pool samples depends on your experimental design.  Please see our manuscript for examples on how controls could be selected in case-control, longitudinal, or other single cell study designs.  
+
+CellANOVA has been tested on data sets consisting of hundreds of thousands of cells.  Here are the runtimes recorded on a XX machine:
+    100,000 cells:
+    1,000,000 cells:
 
 For more model details, validation results and real dataset analysis, please check out our paper (to be added). If you use our method, please use the following citation (to be added):
-
-
-
 
 ## Installation
 
@@ -31,13 +31,10 @@ If you use conda environment, you can use the following command for an easy setu
 conda env create -f environment.yml
 ```
 
-
-
-
 ## Tutorials
 ### Quick Start
 
-The following is an quick example showing CellANOVA integration pipeline.
+The following is a quick example showing CellANOVA integration pipeline.
 
 ```python
 ## load required package
@@ -66,7 +63,7 @@ integrated.var_names = adata_prep.var_names
 ```
 
 
-### Example Notebooks
+### Example Workflows
 
 For more detailed illustrations, please refer to the following jupyter notebooks:
  * [CellANOVA integration workfolow](https://github.com/Janezjz/cellanova/blob/main/tutorials/cellanova_integration.ipynb)
