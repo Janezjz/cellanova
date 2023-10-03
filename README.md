@@ -25,11 +25,19 @@ For more model details, validation results and real dataset analysis, please che
 
 Our Python package has been tested on python=3.7, 3.8, 3.9. It depends on numpy>=1.20.3, scipy>=1.7.1, pandas>=1.3.2, scikit-learn>=1.0.2, anndata>=0.7.6, scanpy>=1.8.1, harmonypy>=0.0.6. 
 
+If you use pip, then the package can be installed by
+
+```bash
+pip install cellanova
+```
+
 If you use conda environment, you can use the following command for an easy setup. It will build a seperate cellanova environment, and have all dependencies installed.
 
 ```bash
 conda env create -f environment.yml
 ```
+
+
 
 ## Tutorials
 ### Quick Start
