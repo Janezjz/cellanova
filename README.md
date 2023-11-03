@@ -19,7 +19,7 @@ CellANOVA has been tested on data sets consisting of hundreds of thousands of ce
     100,000 cells:
     1,000,000 cells:
 
-For more model details, validation results and real dataset analysis, please check out our [manuscript on bioRXiv](https://wellness.upenn.edu). If you use our method, please use the following citation:
+For more model details, validation results and real dataset analysis, please check out our [manuscript on bioRXiv](https://www.biorxiv.org/content/10.1101/2023.05.05.539614v3). If you use our method, please use the following citation:
 
 ```
 @article{zhang2023signal,
