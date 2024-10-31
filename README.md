@@ -60,11 +60,11 @@ The following is a quick example showing CellANOVA integration pipeline.
 ## load required package
 import anndata as ad
 import scanpy as sc
-from cellanova import *
+import cellanova as cnova
 
 ## load and preprocess data
 adata = sc.read_h5ad('raw_data.h5ad')
-adata_prep = preprocess_data(adata, integrate_key='dataidx')
+adata_prep = cnova.model.preprocess_data(adata, integrate_key='dataidx')
 
 ## construct control pool
 control_dict = {
@@ -72,9 +72,9 @@ control_dict = {
 }
 
 ## model fitting
-adata_prep= calc_ME(adata_prep, integrate_key='dataidx')
-adata_prep = calc_BE(adata_prep, integrate_key, control_dict)
-adata_prep = calc_TE(adata_prep, integrate_key)
+adata_prep= cnova.model.calc_ME(adata_prep, integrate_key='dataidx')
+adata_prep = cnova.model.calc_BE(adata_prep, integrate_key, control_dict)
+adata_prep = cnova.model.calc_TE(adata_prep, integrate_key)
 
 ## create an independent anndata object for cellanova-integrated data
 integrated = ad.AnnData(adata_prep.layers['denoised'], dtype=np.float32)
